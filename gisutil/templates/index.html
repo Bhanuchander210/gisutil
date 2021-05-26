@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GISUtil</title>
+</head>
+
+<style>
+    .txtCnt{
+        text-align: center;
+    }
+</style>
+
+<body>
+
+{% for name, fig in figs.items() %}
+    <h3 class="txtCnt">{{name}}</h3>
+    <div class="plot" id="{{name}}">{{fig | safe}}</div>
+{% endfor %}
+</body>
+
+</html>
